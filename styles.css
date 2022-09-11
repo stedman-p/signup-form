@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+    --margin-size: 10vw;
+    --content-background-color: white;
+    --color-purple-link: #6264cc;
+    --color-purple-link-visited: #afb0e5;
+    --color-green-link: #629968;
+    --color-green-link-visited: #c0d7c2;
+}
+
+body {
+    background-color: black;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    margin-right: var(--margin-size);
+    margin-left: var(--margin-size);
+    width: calc(100vw - (2 * var(--margin-size)));
+    display: flex;
+    background-color: var(--content-background-color);
+}
+
+.left {
+    position: relative;
+    background-image: url("./img/sitting-cats2.png");
+    height: 100vh;
+    min-width: 35rem;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.logo {
+    background-color: rgb(0, 0, 0, 50%);
+    color: white;
+    /*opacity: 50%;*/
+    position: relative;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo p {
+    color: white;
+    font-size: x-large;
+    opacity: 100%;
+}
+
+#cat-logo {
+    height: 3rem;
+    position: relative;
+    top: 0.2rem;
+}
+
+.img-credit {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.img-credit a:link {
+    color: var(--color-green-link);
+}
+
+.img-credit a:visited {
+    color: var(--color-green-link-visited);
+}
+
+.right {
+    background-color: var(--content-background-color);
+    margin-left: 2rem;
+}
+
+.right p {
+
+}
+
+.no-gap-above {
+
+}
+
+form {
+
+}
+
+.signup-card {
+
+}
+
+fieldset label {
+
+}
+
+fieldset input {
+
+}
+
+button[type="submit"] {
+
+}

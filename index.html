@@ -5,27 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./styles.css">
     <script src="./scripts.js" defer></script>
-    <title>Sign In</title>
+    <title>Sign Up</title>
 </head>
 <body>
-    <div class="grid">
-        <div class="left">
-            <img class="background-image" src="./img/narrow-cat.png" alt="Photo of cat-shaped object on a table in sunset light">
-            <div class="logo">
-                    <img src="img/cat-logo.png" alt="Transparent logo">
-            </div>
-            <a target="_blank" href="https://iconbros.com/icons/cat_9">Cat</a> icon by <a target="_blank" href="https://iconbros.com">IconBros</a>
+<div class="container">
+    <!--        TODO: remove this image-->
+    <!--        <img id="REMOVE" src="./img/narrow-cat.png" alt="bleh">-->
+    <div class="left">
+        <div class="logo">
+            <p><img id="cat-logo" src="img/cat-logo.png" alt="Transparent logo"> Cats</p>
         </div>
-        <div class="right">
-            <h1>Sign up for cat pictures</h1>
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
-            <p class="no-gap-above">Sign up <em>now</em> to get started.</p>
-            <p>You <em>know</em> what you want to do.</p>
-            <form action="example.com/path" method="post">
+        <div class="img-credit">
+            <a target="_blank" href="https://iconbros.com/icons/cat_9">Cat </a> icon by <a target="_blank" href="https://iconbros.com">IconBros</a>
+        </div>
+    </div>
+    <div class="right">
+        <h1>Sign Up</h1>
+        <p>This is not a real online service! You know you need something like this in
+            your life to help you realize your deepest dreams.</p>
+        <p class="no-gap-above">Sign up <em>now</em> to get started.</p>
+        <p>You <em>know</em> what you want to do.</p>
+        <form action="example.com/path" method="post">
+            <div class="signup-card">
                 <h2>Let's do this!</h2>
-                <fieldset class="signup-card">
+                <fieldset>
                     <label for="fname">FIRST NAME</label>
                     <input id="fname" name="first_name" type="text">
 
@@ -44,10 +50,11 @@
                     <label for="confirm-password">CONFIRM PASSWORD</label>
                     <input id="confirm-password" name="confirm-password" type="text">
                 </fieldset>
-                <button type="submit">Create Account</button>
-                <p>Already have an account? <a href="example.com/login">Log in</a></p>
-            </form>
-        </div>
+            </div>
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="example.com/login">Log in</a></p>
+        </form>
     </div>
+</div>
 </body>
 </html>
