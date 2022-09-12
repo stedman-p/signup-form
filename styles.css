@@ -3,10 +3,26 @@
 :root {
     --margin-size: 10vw;
     --content-background-color: white;
-    --color-purple-link: #6264cc;
-    --color-purple-link-visited: #afb0e5;
-    --color-green-link: #629968;
-    --color-green-link-visited: #c0d7c2;
+    --color-grey-lightest: #fafafa;
+    --color-grey-light: #f0f0f2;
+    --color-grey: #d6d6db;
+    --color-grey-semidark: #a7a7b3;
+    --color-grey-dark: #6e6e7f;
+
+    --color-blue-lightest: #eef0f7;
+    --color-blue-light: #a8b3d7;
+    --color-blue: #7587BF;
+    --color-blue-semidark: #5168ae;
+    --color-blue-dark: #39487a;
+    --color-blue-darkest: #181f34;
+
+    --color-green-lightest: #eafaf4;
+    --color-green-light: #4ED9A6;
+    --color-green: #4ED9A6;
+    --color-green-dark: #209369;
+    --color-green-darkest: #0e3f2d;
+
+    --color-red: #e34402;
 }
 
 body {
@@ -14,22 +30,51 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+h1, h2 {
+    color: var(--color-blue-dark);
+}
+
+button {
+    margin: 1rem 1rem 1rem 2rem;
+    background-color: var(--color-blue-dark);
+    color: var(--color-blue-lightest);
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--color-blue-semidark);
+}
+
+a:link {
+    color: var(--color-blue-darkest);
+    font-weight: bold;
+}
+
+a:visited {
+    color: var(--color-blue-light)
+}
+
 .container {
     margin-right: var(--margin-size);
     margin-left: var(--margin-size);
     width: calc(100vw - (2 * var(--margin-size)));
-    display: flex;
-    background-color: var(--content-background-color);
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 13.7vh 1fr;
+    height: 100vh;
+    background-color: var(--color-grey-lightest);
+    background-image: url("./img/shorter-cats.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .left {
     position: relative;
-    background-image: url("./img/sitting-cats2.png");
     height: 100vh;
-    min-width: 35rem;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
     color: white;
 }
 
@@ -64,24 +109,23 @@ body {
 }
 
 .img-credit a:link {
-    color: var(--color-green-link);
+    color: var(--color-blue-dark);
 }
 
 .img-credit a:visited {
-    color: var(--color-green-link-visited);
+    color: var(--color-blue-light);
 }
 
 .right {
     background-color: var(--content-background-color);
-    margin-left: 2rem;
+    /*TODO: give margin to inner div*/
+    /*padding: 0 2rem 0 2rem;*/
+    height: 100vh;
+    overflow: hidden;
 }
 
-.right p {
-
-}
-
-.no-gap-above {
-
+.right h1,p {
+    margin: 1rem 2rem;
 }
 
 form {
@@ -89,17 +133,64 @@ form {
 }
 
 .signup-card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2.5px 15px;
+    background-color: var(--color-grey-lightest);
+    box-sizing: border-box;
+    padding: 0.5rem 2rem 2rem 2rem;
+}
 
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+div.input {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 1rem 0rem;
 }
 
 fieldset label {
-
+    font-size: small;
 }
 
 fieldset input {
-
+    max-width: 20rem;
+    border: solid var(--color-grey-semidark) 1px;
+    border-radius: 0.25rem;
+    background-color: var(--color-grey-light);
 }
 
-button[type="submit"] {
+fieldset input:focus {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-color: var(--color-blue-semidark);
+    /*outline: var(--color-blue-dark) solid 0.1rem;*/
+    outline: none;
+}
 
+fieldset input:focus-visible {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-color: var(--color-blue-semidark);
+    /*outline: var(--color-blue-dark) solid 0.1rem;*/
+    outline: none;
+}
+
+@media only screen and (max-width: 990px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    fieldset {
+        grid-template-columns: 1fr;
+    }
 }

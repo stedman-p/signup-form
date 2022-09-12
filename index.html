@@ -12,47 +12,58 @@
 </head>
 <body>
 <div class="container">
-    <!--        TODO: remove this image-->
-    <!--        <img id="REMOVE" src="./img/narrow-cat.png" alt="bleh">-->
     <div class="left">
         <div class="logo">
-            <p><img id="cat-logo" src="img/cat-logo.png" alt="Transparent logo"> Cats</p>
+            <p><img id="cat-logo" src="img/cat-logo.png" alt="Transparent logo"> CATPHOTOS.kjv</p>
         </div>
         <div class="img-credit">
-            <a target="_blank" href="https://iconbros.com/icons/cat_9">Cat </a> icon by <a target="_blank" href="https://iconbros.com">IconBros</a>
+            <a target="_blank" href="https://iconbros.com/icons/cat_9">Cat </a> icon by <a
+                target="_blank" href="https://iconbros.com">IconBros</a>
         </div>
     </div>
     <div class="right">
         <h1>Sign Up</h1>
-        <p>This is not a real online service! You know you need something like this in
+        <p style="margin-bottom: 0">This is not a real online service! You know you need something like this in
             your life to help you realize your deepest dreams.</p>
-        <p class="no-gap-above">Sign up <em>now</em> to get started.</p>
+        <p style="margin-top: 0">Sign up <em>now</em> to get started.</p>
         <p>You <em>know</em> what you want to do.</p>
         <form action="example.com/path" method="post">
             <div class="signup-card">
                 <h2>Let's do this!</h2>
                 <fieldset>
-                    <label for="fname">FIRST NAME</label>
-                    <input id="fname" name="first_name" type="text">
+                    <div class="input">
+                        <label class="input-label" for="fname">FIRST NAME</label>
+                        <input id="fname" name="first_name" type="text" maxlength="100" placeholder="Alex" required>
+                    </div>
 
-                    <label for="lname">LAST NAME</label>
-                    <input id="lname" name="last_name" type="text">
+                    <div class="input">
+                        <label class="input-label" for="lname">LAST NAME</label>
+                        <input id="lname" name="last_name" type="text" maxlength="100" placeholder="Smith" required>
+                    </div>
 
-                    <label for="email">EMAIL</label>
-                    <input id="email" name="email_addr" type="text">
+                    <div class="input">
+                        <label class="input-label" for="email">EMAIL</label>
+                        <input id="email" name="email_addr" type="email" maxlength="100" placeholder="user@example.com">
+                    </div>
 
-                    <label for="phone-num">PHONE NUMBER</label>
-                    <input id="phone-num" name="phone" type="text">
+                    <div class="input">
+                        <label class="input-label" for="phone-num">PHONE NUMBER</label>
+                        <input id="phone-num" name="phone" type="tel" maxlength="100" placeholder="(XXX) XXX-XXXX" required>
+                    </div>
 
-                    <label for="password">PASSWORD</label>
-                    <input id="password" name="password" type="text">
+                    <div class="input">
+                        <label class="input-label" for="password">PASSWORD (minimum of 10 characters)</label>
+                        <input id="password" name="password" type="password" maxlength="100" minlength="10" placeholder="••••••••••" required>
+                    </div>
 
-                    <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input id="confirm-password" name="confirm-password" type="text">
+                    <div class="input">
+                        <label class="input-label" for="confirm-password">CONFIRM PASSWORD</label>
+                        <input id="confirm-password" name="confirm-password" maxlength="100" type="password" minlength="10" placeholder="••••••••••" required>
+                    </div>
                 </fieldset>
             </div>
             <button type="submit">Create Account</button>
-            <p>Already have an account? <a href="example.com/login">Log in</a></p>
+            <p>Already have an account? <a href="https://example.com/login">Log in</a></p>
         </form>
     </div>
 </div>
